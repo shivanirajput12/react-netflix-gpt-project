@@ -5,6 +5,8 @@
 - Header
 - Login Form
 - Signup Form
+- Form Validation
+- UseRef Hook
 
 # Planning of our application
 

@@ -1,10 +1,17 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validations";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -15,18 +22,53 @@ const Login = () => {
   };
   const handleButtonClick = () => {
     //vaidate the form data
-    console.log(email.current.value);
-    console.log(password.current.value);
-    console.log(name.current.value);
+
     const message = checkValidData(
       email.current.value,
-      password.current.value,
-      name.current.value
+      password.current.value
+      // name.current.value
     );
     setErrorMessage(message);
-    console.log(message);
+    if (message) return;
 
-    //signin / signup
+    // Sign In Sign Up Login
+    if (!isSignInForm) {
+      //Sign up logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/browse");
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    } else {
+      //Sign in logic
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/browse");
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    }
   };
   return (
     <div>

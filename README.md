@@ -17,6 +17,9 @@
 - Update Profile
 - Bugfix: Sign up user - dispayName and profile picture update
 - Bugfix: If the user in not logged In redirect /browse to login and vice-versa.
+- unsubscribed to the onAuthStateChanged callback
+- whenever use strings like URL always use constants.
+- Add hardcoded values to the constants
 
 # Planning of our application
 

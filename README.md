@@ -20,6 +20,8 @@
 - unsubscribed to the onAuthStateChanged callback
 - whenever use strings like URL always use constants.
 - Add hardcoded values to the constants
+- Regiser TMDB API & create an app & get access token
+- Bet data from TMDB now playingmovies list API
 
 # Planning of our application
 

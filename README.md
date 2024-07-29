@@ -36,7 +36,9 @@
 - TMDB image cdn found
 - Made the browse page cool with tailwind css
 - Created useUpcoming and useTopRated movies custom hook
-- GPT search feature
+- GPT search Page
+- Gpt Search bar
+- multi-language feature in our App(\*\*\*Big Feature)
 
 # Planning of our application
 

@@ -35,7 +35,7 @@
 - Build moviecard
 - TMDB image cdn found
 - Made the browse page cool with tailwind css
-- Created usePopularMovies custom hook
+- Created useUpcoming and useTopRated movies custom hook
 
 # Planning of our application
 

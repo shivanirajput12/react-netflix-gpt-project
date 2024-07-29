@@ -21,7 +21,15 @@
 - whenever use strings like URL always use constants.
 - Add hardcoded values to the constants
 - Regiser TMDB API & create an app & get access token
-- Bet data from TMDB now playingmovies list API
+- Get data from TMDB now playingmovies list API
+- Custom Hook for Now playing movies
+- Create movieSlice
+- Update store with movies data
+- Plainning for Miancontainer & Secondary Container
+- Fetch data for trailer video
+- Update store with trailer video data
+- Embeded the youtube video and make it autoplay & mute
+- Added tailwind classes to make main container cool
 
 # Planning of our application
 

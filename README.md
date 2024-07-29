@@ -30,6 +30,7 @@
 - Update store with trailer video data
 - Embeded the youtube video and make it autoplay & mute
 - Added tailwind classes to make main container cool
+- Build Secondary Container
 
 # Planning of our application
 

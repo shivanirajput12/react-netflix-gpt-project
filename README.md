@@ -31,6 +31,11 @@
 - Embeded the youtube video and make it autoplay & mute
 - Added tailwind classes to make main container cool
 - Build Secondary Container
+- Build movieList
+- Build moviecard
+- TMDB image cdn found
+- Made the browse page cool with tailwind css
+- Created usePopularMovies custom hook
 
 # Planning of our application
 
